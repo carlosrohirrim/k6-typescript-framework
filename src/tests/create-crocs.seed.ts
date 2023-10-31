@@ -35,7 +35,7 @@ const CROCODILE_OWNER: User = {
   password: 'superCroc2019'
 }
 
-const BASE_URL = 'https://test-api.loadimpact.com';
+const BASE_URL = 'https://test-api.k6.io';
 
 // The Setup Function is run once before the Load Test https://docs.k6.io/docs/test-life-cycle
 export function setup() {

@@ -1,4 +1,5 @@
 # k6 Typescript Framework
+
 A starter framework for k6 load tests written in TypeScript.
 
 We'll be using the [LoadImpact Test API](https://test-api.loadimpact.com/) as the website we'll be testing. This is a dummy application/api for crocodiles owners to use who want to keep track of their crocodiles. In the test we will **create a user**, **query** some crocodiles, and **create**, **update** and **delete** a crocodile.
@@ -9,40 +10,39 @@ Install the [k6 performance test tool](https://docs.k6.io/docs/installation).
 
 Clone this repository and open in the IDE of your choice.
 
-Install dependencies using: 
+Install dependencies using:
 
-`yarn install` 
+`yarn install`
 
 in the terminal (you need to have [yarn](https://yarnpkg.com/getting-started/install) installed on your machine).
 
-Now run the test using the following command: 
+Now run the test using the following command:
 
-`yarn go:k6` 
+`yarn go:k6`
 
 This will run the [soak.test.ts](/src/tests/soak.test.ts) script, using **k6**.
 
-## Run with Monitoring 
+## Run with Monitoring
 
 ![Grafana Dashboard](https://grafana.com/api/dashboards/11837/images/7658/image)
 
 Ensure you have [docker](https://www.docker.com/products/docker-desktop) and [docker-compose](https://docs.docker.com/compose/install/) installed on your machine.
 
-Start the monitors using the following command: 
+Start the monitors using the following command:
 
-`yarn monitors` 
+`yarn monitors`
 
 Go to **localhost:3000** in your browser to login to Grafana with the username '**admin**' and the password '**admin**'.
 
-Add the [k6 dashboard](https://grafana.com/grafana/dashboards/11837) to **Grafana** by following these instructions: [Importing a Dashboad](https://grafana.com/docs/grafana/latest/reference/export_import/)
+Add the [k6 dashboard](https://grafana.com/grafana/dashboards/11837) to __Grafana__ by following these instructions: [Importing a Dashboad](https://grafana.com/docs/grafana/latest/reference/export_import/)
 
-Now run the test using the following command: 
+Now run the test using the following command:
 
-`yarn go:docker` 
+`yarn go:docker`
 
 This will run the [soak.test.ts](/src/tests/soak.test.ts) script, using **k6** installed in a docker, which outputs the results to **influxDB**. **Grafana** is used to visualise the results.
 
 **Please NOTE:** If you're running in **Windows** you'll need to use the full path for the local directories in the **volumes** sections of the [docker-compose.yaml](docker-compose.yml) file. See the [k6 documentation](https://docs.k6.io/docs/docker-on-windows) for more details.
-
 
 ## Run the 'Seed' Script
 
@@ -58,9 +58,9 @@ This is just an example script and not needed for the test.
 
 The test is based on the following sample script and API provided by k6:
 
-https://test-api.loadimpact.com/
+https://test-api.k6.io/
 
-This is a dummy api for people who own crocodiles to keep track of their crocodiles. 
+This is a dummy api for people who own crocodiles to keep track of their crocodiles.
 
 ![Crocodile Pic](https://images.pexels.com/photos/207001/pexels-photo-207001.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260, "Photo by Pixabay from Pexels")
 
@@ -100,11 +100,11 @@ This is where you create your performance tests using the modules from the rest 
 
 ## Checking your Code
 
-Use: 
+Use:
 
-`yarn check-types` 
+`yarn check-types`
 
-to check your code against type safety and the rules set in your [tsconfig.json file](tsconfig.json). You can also have this running while you work using: 
+to check your code against type safety and the rules set in your [tsconfig.json file](tsconfig.json). You can also have this running while you work using:
 
 `yarn check-types:watch`.
 
@@ -118,12 +118,11 @@ to check your code against type safety and the rules set in your [tsconfig.json 
 
 It's easy to debug `k6` scripts. See the [k6 documentation](https://docs.k6.io/docs/debugging) for more details.
 
-## Running in CI/CD Pipelines 
+## Running in CI/CD Pipelines
 
-`k6` has been designed to work with your `CI/CD` pipeline whatever tool you're using. There are examples for [GitHub Actions](https://blog.loadimpact.com/load-testing-using-github-actions), [GitLab](https://blog.loadimpact.com/integrating-load-testing-with-gitlab), [CircleCI](https://github.com/loadimpact/k6-circleci-example), [Jenkins](https://github.com/loadimpact/k6-jenkins-example) and many others. 
+`k6` has been designed to work with your `CI/CD` pipeline whatever tool you're using. There are examples for [GitHub Actions](https://blog.loadimpact.com/load-testing-using-github-actions), [GitLab](https://blog.loadimpact.com/integrating-load-testing-with-gitlab), [CircleCI](https://github.com/loadimpact/k6-circleci-example), [Jenkins](https://github.com/loadimpact/k6-jenkins-example) and many others.
 
-
-## Problems with this Framework 
+## Problems with this Framework
 
 If you notice any problems or improvements that could be made to this example framework, I accept PRs or you can raise an issue on the [k6 community forum](https://community.k6.io/)
 
