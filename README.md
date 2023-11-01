@@ -2,7 +2,7 @@
 
 A starter framework for k6 load tests written in TypeScript.
 
-We'll be using the [LoadImpact Test API](https://test-api.loadimpact.com/) as the website we'll be testing. This is a dummy application/api for crocodiles owners to use who want to keep track of their crocodiles. In the test we will **create a user**, **query** some crocodiles, and **create**, **update** and **delete** a crocodile.
+We'll be using the [Grafana k6 REST and WS Play API](https://test-api.k6.io/) as the website we'll be testing. This is a dummy application/api for crocodiles owners to use who want to keep track of their crocodiles. In the test we will **create a user**, **query** some crocodiles, and **create**, **update** and **delete** a crocodile.
 
 ## Quick Start :zap:
 
