@@ -21,6 +21,8 @@ services:
       - DOCKER_INFLUXDB_INIT_ORG=k6io
       - DOCKER_INFLUXDB_INIT_BUCKET=demo
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=EEKpryGZk8pVDXmIuy484BKUxM5jOEDv7YNoeNZUbsNbpbPbP6kK_qY9Zsyw7zNnlZ7pHG16FYzNaqwLMBUz8g==
+    volumes:
+      - ./influxdb:/var/lib/influxdb
 
   grafana:
     image: grafana/grafana:latest
